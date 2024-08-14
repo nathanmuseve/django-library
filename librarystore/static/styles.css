@@ -1,0 +1,207 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #002B56;
+  color: #fff;
+}
+h1, h2, h3{
+  color: #00FFFF;  
+}
+h1, h2, h3, h4, h5, h6, p , a {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+
+  /* Navigation bar  */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left:0;
+  right: 0;
+  height: 3rem;
+  background-color: #00FFFF;
+}
+header h4 {
+  color: #002B56;
+}
+nav {
+  padding: 0 2rem;
+}
+nav ul{
+  display: flex;
+  gap: 2rem;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+nav ul li a:hover {
+color: #002B56;
+border-bottom: 3px #ffffff solid;
+transform-origin: left;
+transition-delay: 0;
+transform-box: fill-box;
+transition:  0.4s;
+}
+
+a {
+  color: #00FFFF;
+  text-decoration: underline dotted 2px #ffffff;
+  margin: 0 auto;
+}
+#nav {
+  position: absolute;
+  top: 0.5rem;
+}
+.myform {
+  position: absolute;
+  top: 4px;
+  right: -1rem;
+}
+section h4 {
+  position: absolute;
+  left: 2rem;
+  top: -2px;
+}
+#menu {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 1rem;
+  flex-direction: column;
+  gap:2px;
+  flex-wrap: nowrap;
+}
+ #menu span {
+  width: 36px;
+  height: 6px;
+  font-weight: 600;
+  margin: 0.2rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.about-author h1 {
+  color: #ffffff;
+  text-align: center;
+}
+.novelist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.novels-list ul li a{
+  list-style: disc;
+}
+/* searh bar  */
+form {
+  padding: 3rem;
+}
+input {
+  text-align: left;
+  padding-left: 1rem;
+}
+form input, button, textarea {
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #002B56 ;
+  border-radius: 4px;
+  outline: none;
+}
+form input::placeholder{
+  color: #002B56;
+  padding: 2px 5px;
+}
+form button {
+  background-color: #002B56;
+  color: #00FFFF;
+  padding: 4px 6px;
+}
+.addnovels form {
+  background-color: #fff;
+}
+
+/* ADD delete data form  */
+form .data label{
+  padding: 1.5rem;
+  color: #002B56;
+}
+form .data input {
+  width: 100%;
+  height: 2.2rem;
+}
+.novelist form  {
+  margin: 1rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+form textarea {
+  width: 100%;
+}
+
+/* Media Query  */
+@media  (min-width: 300px) and (max-width:768px) {
+  h1, h2, h3, h4, h5, h6, p , a {
+    padding: 0.5rem 0.8rem;
+  }
+  
+    /* Navigation bar  */
+    header section {
+      width: 100%;
+    }
+  #nav1{
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    display: none;
+    height: 1200PX;
+    width: 300px;
+    background-color: #00FFFF;
+    padding: 0;
+
+  }
+  nav ul li{
+    margin: 2rem;
+  }
+
+  #menu {
+    display: flex;
+    gap:1px;
+  }
+  #menu span {
+    width: 34px;
+    height: 5px;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  th:last-of-type,th:nth-of-type(5), td:last-of-type, td:nth-of-type(5) {
+    display: none;
+  }
+  /* searh bar  */
+#myform {
+  display: none;
+}
+}

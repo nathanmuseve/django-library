@@ -1,0 +1,15 @@
+{% extends 'master.html' %}
+{% block title %} 
+Novels Library
+{% endblock title%}
+
+{% block content %}
+<main class="home">
+  <h1>Welcome to our Novels Library</h1>
+  <p>This is where you will find your favourite novel by your favorte author. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, praesentium ipsam ut unde ducimus, officiis ratione reiciendis porro vel corporis nihil dolores perferendis dicta delectus quam vitae minus. Hic, voluptates.</p>
+
+  <p>Go to Novels <a href="{% url 'novel_list' %}"> Novels</a>. Get to read about your favorite novel artisit Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora quas hic illo!</p>
+  <p><a href="{% url 'all_detail' %}">Full Novels List</a></p>
+</main>
+
+{% endblock content %}

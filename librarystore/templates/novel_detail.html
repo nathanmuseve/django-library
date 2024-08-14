@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+{% block title %} Novel Details about {{novels.title}} {% endblock %}
+
+{% block content %}
+<section class="about-author">
+  <h1>Welcome! Novel Details</h1>
+  <h2>Title: {{novel.title}}</h2>
+  <h2>Author: {{novel.author}}</h2>
+  <h2>Genre: {{novel.genre}}</h2>
+  <h3>Date Published: {{novel.published_date}}</h3>
+  <h3>Edition: {{novel.edition}}</h3>
+  <p>Description: {{novel.description}}</p>
+</section>
+<hr>
+<p>Go Back to <a href="{% url 'novel_list' %}">Novels List</a></p>
+{% endblock %}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  
+  <!-- nav bar  -->
+  {% block navbar %}
+  <header>
+    <section class="relative">
+      <h4>Django</h4>
+      <nav id="nav">
+        <ul id="nav1">
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'novel_list' %}">Novels</a></li>
+          <li><a href="{% url 'all_detail' %}">Categories</a></li>
+        </ul>
+
+        <!-- search button  -->
+      <form action="" id="myform">
+        <input type="search" placeholder="search something...">
+        <button type="submit">Search</button>
+      </form>
+      </nav>
+
+  
+      <div id="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+  
+  </header>
+  {% endblock%}
+  
+  <!-- BOdy content from templates -->
+  {% block content %}
+  
+  {% endblock %}
+
+  <!-- footer block  -->
+  {% block footer %}
+  <footer>
+    <p>&copy; 2024. All Rights Reserved.</p>
+    <p>Designed by Nathan Museve</p>
+    <p>Library</p>
+  </footer>
+  {% endblock %}
+
+  <script src="{% static 'scripts.js' %}"></script>
+  </body>
+  
+  </html>
