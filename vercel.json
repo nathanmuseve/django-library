@@ -1,17 +1,14 @@
 {
   "builds": [
     {
-      "src": "Bookstore/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
+      "src": "django-library/wsgi.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Bookstore/wsgi.py"
+      "dest": "django-library/wsgi.py"
     }
   ]
 }
