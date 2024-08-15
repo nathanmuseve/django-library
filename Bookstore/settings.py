@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2ga_sak$u+xc3)7(b#tt3-y@3mc&(*hq@!@-flfd9dy25#&*&o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS =[]
-# ALLOWED_HOSTS = ['django-library-z1kq-nathans-projects-f9e3bde4.vercel.app', '.now.sh']
-# Application definition
+# ALLOWED_HOSTS =[]
+ALLOWED_HOSTS = ['django-library-seven.vercel.app', '.now.sh']
+# Application definition django-library-seven.vercel.app
 
 INSTALLED_APPS = [
     'django.contrib.admin',
