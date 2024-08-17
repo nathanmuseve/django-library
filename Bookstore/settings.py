@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2ga_sak$u+xc3)7(b#tt3-y@3mc&(*hq@!@-flfd9dy25#&*&o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-# ALLOWED_HOSTS =[]
-ALLOWED_HOSTS = ['django-library-seven.vercel.app', '.now.sh']
+# ALLOWED_HOSTS =['*']
+ALLOWED_HOSTS = ['django-library-nathans-projects-f9e3bde4.vercel.app', '.now.sh']
 # Application definition django-library-seven.vercel.app
 
 INSTALLED_APPS = [
@@ -116,8 +116,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_ROOT =BASE_DIR / 'productionfiles'
+
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+
+STATIC_ROOT = BASE_DIR / 'productionfiles'
+MEDIA_ROOT = BASE_DIR / '   media'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
