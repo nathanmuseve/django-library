@@ -4,4 +4,5 @@ from .models import Novel
 class NovelForm(forms.ModelForm):
     class Meta:
         model = Novel
-        fields = '__all__' 
+        fields = ['title', 'author', 'genre', 'description', 'published_date', 'edition']
+        

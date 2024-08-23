@@ -8,4 +8,5 @@ class Novel(models.Model):
   description = models.TextField()
   published_date =models.DateField(blank=False)
   edition = models.IntegerField()
+  bnanner = models.ImageField(default='fallback.webp',blank=True)
   
