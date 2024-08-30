@@ -11,6 +11,7 @@
   <h3>Date Published: {{novel.published_date}}</h3>
   <h3>Edition: {{novel.edition}}</h3>
   <p>Description: {{novel.description}}</p>
+  <img src="{{ novel.media.url }}" alt="See">
 </section>
 <hr>
 <p>Go Back to <a href="{% url 'librarystore:novel_list' %}">Novels List</a></p>

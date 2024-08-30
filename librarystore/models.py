@@ -28,8 +28,18 @@ class Group(models.Model):
 class Membership(models.Model):
   person = models.ForeignKey(Person, on_delete=models.CASCADE)
   group = models.ForeignKey(Group, on_delete=models.CASCADE)
-  date_joined = models.DateField()
+  date_joined = models.DateField(auto_now_add=True)
   invite_reason = models.CharField(max_length=64)
   
   def __str__(self):
     return f"{self.person} {self.date_joined} {self.invite_reason}"
+  
+  #contact form
+class Contact(models.Model):
+  name = models.CharField(max_length=20)
+  email = models.EmailField(max_length=30)
+  subject = models.CharField(max_length=20)
+  message = models.TextField()
+  subscribe = models.BooleanField(default=False)
+  submitted_at = models.DateTimeField(auto_now_add=True)
+    

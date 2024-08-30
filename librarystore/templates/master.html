@@ -18,10 +18,13 @@
       <h4>Django</h4>
       <nav id="nav">
         <ul id="nav1">
-          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'librarystore:home' %}">Home</a></li>
+          <li><a href="{% url 'librarystore:testform' %}">TestForm</a></li>
+          <li><a href="{% url 'librarystore:contact' %}">Contact</a></li>
           <li><a href="{% url 'librarystore:novel_list' %}">Novels</a></li>
           <li><a href="{% url 'librarystore:all_detail' %}">Categories</a></li>
           <li><a href="{% url 'librarystore:add' %}">AddNovel</a></li>
+          
         </ul>
 
         <!-- search button  -->

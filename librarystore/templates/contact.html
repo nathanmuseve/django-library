@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+
+{% block title %}
+  Contact_us
+{% endblock title %}
+  
+  {% block content %}
+    <section class="bg-secondary">
+      <form action="{% url 'librarystore:contact' %}" method="post">
+        {% csrf_token %}
+        {{ form  }}
+        <button type="submit" class="btn btn-success">Send</button>
+      </form>
+    </section>
+  {% endblock content %}
+    

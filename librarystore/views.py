@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Novel
-from .forms import NovelForm
+from .models import Novel, Contact
+from .forms import NovelForm, ContactForm, ContactForm1
 
 
 # views
@@ -55,3 +55,33 @@ def add_novel_form(request):
   else:
     form = NovelForm()
   return render(request, 'add.html', {  'form':form })
+
+#contact form frormed from forms.Form, require cleaning
+def contact(request):
+  form = ContactForm()
+  if request.method == "POST":
+    form = ContactForm(request.POST)
+    if form.is_valid():
+      Contact.objects.create(
+        name=form.cleaned_data['name'],
+        email=form.cleaned_data['email'],
+        subject=form.cleaned_data['subject'],
+        message=form.cleaned_data['message'],
+        subscribe=form.cleaned_data['subscribe'],
+      )
+      return render(request, 'success.html', { 'name':form.cleaned_data['name'] })
+  else:
+    form = ContactForm()
+  return render(request, 'contact.html', { 'form':form })
+
+#contact form formed from forms.ModelForm, no cleaning required
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm1(request.POST)
+        if form.is_valid():
+            form.save()  # This saves the form data directly to the database
+            return render(request, 'success.html', { 'form':form})  # Replace 'success_url' with the URL you want to redirect to
+    else:
+        form = ContactForm1()
+    
+    return render(request, 'contact1.html', {'form': form})
