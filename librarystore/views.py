@@ -44,6 +44,7 @@ def add_novel_form(request):
       new_novel = Novel.objects.create(
         title=novel_data['title'],
         author=novel_data['author'],
+        genre = novel_data['genre'],
         description=novel_data['description'],
         published_date=novel_data['published_date'],
         edition=novel_data['edition'],

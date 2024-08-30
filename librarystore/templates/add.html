@@ -1,12 +1,29 @@
 {% extends "master.html" %}
 {% block title %}Add novel{% endblock title %}
 {% block content %}
-<div class="addnovels">
+<div class="add">
     <h1>Add Novel</h1>
-    <form action="{% url 'librarystore:add' %}" method="POST" enctype="multipart/form-data">
+    <form class="w-50" action="{% url 'librarystore:add' %}" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_div }}
-      <button type="submit">Submit</button>
+      <button class="btn text-center bg-primary p-2 m-2" type="submit">Submit</button>
     </form>
   </div>
+
+{% comment %}
+<div class="add">
+  <form method="post">
+    {% csrf_token %}
+    {{ form.title.label }} {{ form.title }}<br>
+    {{ form.author.label }} {{ form.author }}<br>
+    {{ form.description.label }} {{ form.description }}<br>
+    {{ form.genre.label }} {{ form.genre }}<br>
+    {{ form.published_date.label }} {{ form.published_date }}<br>
+    {{ form.edition.label }} {{ form.edition }}<br>
+    {{ form.bnanner.label }} {{ form.bnanner }}<br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+{% endcomment %}
+  
 {% endblock content %}

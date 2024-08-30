@@ -114,9 +114,10 @@ table {
 /* searh bar  */
 form {
   padding: 3rem;
+  margin: 0 auto;
 }
 input {
-  text-align: left;
+  text-align: center;
   padding-left: 1rem;
 }
 form input, button, textarea {
@@ -127,9 +128,9 @@ form input, button, textarea {
   border-radius: 4px;
   outline: none;
 }
-form input::placeholder{
+form input::placeholder, form textarea::placeholder{
   color: #002B56;
-  padding: 2px 5px;
+  /* padding: 2px 5px; */
 }
 form button {
   background-color: #002B56;
@@ -154,7 +155,7 @@ form .data input {
   background-color: #ffffff;
   border-radius: 4px;
 }
-form textarea {
+.form-control {
   width: 100%;
 }
  /* ##404  */
