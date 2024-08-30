@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+{% block title %}Add novel{% endblock title %}
+{% block content %}
+<div class="addnovels">
+    <h1>Add Novel</h1>
+    <form action="{% url 'librarystore:add' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_div }}
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+{% endblock content %}

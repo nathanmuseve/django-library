@@ -10,49 +10,13 @@
     <div class="list">
       <ul>
         {% for novel in novels %}
-        <li><a href="{% url 'novel_detail' novel.id %}">{{novel.title}}</a> by {{novel.author}} {{novel.edition}}Edition
+        <li><a href="{% url 'librarystore:novel_detail' novel.id %}">{{novel.title}}</a> by {{novel.author}} {{novel.edition}}Edition
         </li>
         {% endfor %}
       </ul>
-      <p>Got to All Novel details ad description <a href="{% url 'all_detail' %}">Novel details.</a></p>
+      <p>Got to All Novel details ad description <a href="{% url 'librarystore:all_detail' %}">Novel details.</a></p>
     </div>
-    <div class="addnovels">
-      <h1>Add Novel</h1>
-      <form method="post">
-        <div class="data">
-          <label for="title">Title</label>
-          <input type="text" placeholder="Title" required>
-        </div>
-        <div class="data">
-          <label for="title">Author</label>
-          <input type="text" placeholder="Author" required>
-        </div>
-        <div class="data">
-          <label for="title">Genre</label>
-          <input type="text" placeholder="Genre" required>
-        </div>
-        <div class="data">
-          <label for="title">published_date</label>
-          <input type="text" placeholder="published_date" required>
-        </div>
-        <div class="data">
-          <label for="title">Edition</label>
-          <input type="text" placeholder="Edition" required>
-        </div>
-        <div class="data">
-          <label for="title">Description</label>
-          <textarea name="" id="" cols="20" rows="6" placeholder="description" required></textarea>
-        </div>
-        <div class="btn">
-          <button type="submit">Add Book</button>
-          <button type="reset">Delete All</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <section>
-    <form action="{% url 'novel_list' %}"></form>
+    
   </section>
 </section>
 
